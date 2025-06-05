@@ -28,7 +28,7 @@ export class ProfesorService {
             return new HttpException('Teacher already exists',HttpStatus.CONFLICT)
         }
 
-        const estadoFound= await this.estadocivilService.getEstado(profesor.idEstado,);
+        const estadoFound= await this.estadocivilService.getEstado(profesor.idEstado);
         const generoFound= await this.generoService.getGenero(profesor.idGenero);
         const distritoFound= await this.distritoServce.getDistrito(profesor.idDistrito);
 
