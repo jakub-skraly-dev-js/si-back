@@ -29,7 +29,7 @@ export class DetallenotaService {
             return new HttpException('Detalle nota already exists',HttpStatus.CONFLICT)
         }
 
-        const notaFound= await this.notaService.getNota(detalleNota.idDetalleMC,);
+        const notaFound= await this.notaService.getNota(detalleNota.idDetalleMC);
         const unidadFound= await this.unidadService.getUnidad(detalleNota.idUnidad);
         const tipoFound= await this.tipoService.getTipo(detalleNota.idTipo);
 
